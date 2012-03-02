@@ -13,8 +13,8 @@
 	</header>
 	<form>
 	<label for="todo-item">Todo item:</label>
-	<input type="text" name="todo-item" placeholder="Buy milk"/>
-	<input type="submit"/>
+	<input type="text" name="todo-item" id="todo-item" placeholder="Buy milk"/>
+	<input type="submit" onclick="addTodo(); return false;"/>
 	</form>
 	<ul id="todoItems">
 	</ul>

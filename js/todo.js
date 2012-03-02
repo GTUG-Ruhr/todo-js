@@ -65,23 +65,14 @@ function renderTodo(row){
 	li.appendChild(t);
 	todoItems.appendChild(li);
 }
+function addTodo() {
+	var todo = document.getElementById('todo-item');
+	gtugruhr.indexedDB.addTodo(todo.value);
+	todo.value = '';
+}
 function init(){
 	gtugruhr.indexedDB.open();
 }
 $(document).ready(function(){
 		init();
-		$("form").submit(function(){
-			if(!$("input:first").val()){
-			$("body").append("No valid input. ");
-			return false;
-			}
-			else {
-			//TODO save
-			var todo = $("input:first");
-			gtugruhr.indexedDB.addTodo(todo.val());
-			//TODO clean-up
-			todo.val("");
-			}
-			return false;
-			});
 		});
