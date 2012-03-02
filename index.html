@@ -1,22 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<!-- <script type="application/dart" src="dart/todo.dart"/> -->
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="js/todo.js"></script>
-	<title>Todo: Dart vs. Javascript</title>
-	<meta charset="utf-8"/>
+<style>
+body {
+color: #222;
+font: 14px Arial;
+}
+
+body a {
+color: #3D5C9D;
+       text-decoration: none;
+}
+</style>
+<script src="js/todo.js">
+</script>
 </head>
 <body>
-	<header>
-	<h1>Todo</h1>
-	</header>
-	<form>
-	<label for="todo-item">Todo item:</label>
-	<input type="text" name="todo-item" id="todo-item" placeholder="Buy milk"/>
-	<input type="submit" onclick="addTodo(); return false;"/>
-	</form>
-	<ul id="todoItems">
-	</ul>
+<header>
+<h1>Todo</h1>
+</header>
+<ul id="todoItems"></ul>
+<input type="text" id="todo" name="todo" placeholder="What do you need to do?" style="width: 200px;" />
+<input type="submit" value="Add Todo Item" onclick="addTodo(); return false;"/>
 </body>
 </html>
